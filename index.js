@@ -1,8 +1,8 @@
-import {COLORS, SIZES} from '@app/constants/themes';
-import React, {useEffect, useState} from 'react';
-import {Text} from 'react-native';
+// import {COLORS, SIZES} from '@app/constants/themes';
+import React, { useEffect, useState } from "react";
+import { Text } from "react-native";
 
-const CountdownTimer = ({endDateString}) => {
+const CountdownTimer = ({ endDateString }) => {
   const [timeDifference, setTimeDifference] = useState(null);
 
   useEffect(() => {
@@ -13,11 +13,11 @@ const CountdownTimer = ({endDateString}) => {
 
       if (isNaN(timeDiff) || timeDiff <= 0) {
         clearInterval(interval);
-        setTimeDifference('Sale has ended');
+        setTimeDifference("Sale has ended");
       } else {
         const days = Math.floor(timeDiff / (24 * 60 * 60 * 1000));
         const hours = Math.floor(
-          (timeDiff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000),
+          (timeDiff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000)
         );
         const minutes = Math.floor((timeDiff % (60 * 60 * 1000)) / (60 * 1000));
         const seconds = Math.floor((timeDiff % (60 * 1000)) / 1000);
@@ -33,10 +33,11 @@ const CountdownTimer = ({endDateString}) => {
   return (
     <Text
       style={{
-        alignSelf: 'flex-end',
-        color: COLORS.green,
-        marginHorizontal: SIZES.base,
-      }}>
+        alignSelf: "flex-end",
+        color: "#000",
+        // marginHorizontal: SIZES.base,
+      }}
+    >
       {timeDifference}
     </Text>
   );
