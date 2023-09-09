@@ -1,0 +1,26 @@
+{
+  "name": "countdowntimer",
+  "version": "1.0.0",
+  "description": "count down timer ending time",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/city0666/endDateClock.git"
+  },
+  "keywords": [
+    "countdowndate",
+    "betweendays",
+    "react-native"
+  ],
+  "author": "sreeraj",
+  "license": "ISC",
+  "peerDependencies": { "react": "18.1.0",
+  "react-native": "0.70.6"},
+  "bugs": {
+    "url": "https://github.com/city0666/endDateClock/issues"
+  },
+  "homepage": "https://github.com/city0666/endDateClock#readme"
+}
