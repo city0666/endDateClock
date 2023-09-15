@@ -1,11 +1,16 @@
-// import {COLORS, SIZES} from '@app/constants/themes';
+import { getTimeDifferenceFormatted } from "./timeUtils";
 import React, { useEffect, useState } from "react";
 import { Text } from "react-native";
 
-const CountdownTimer = ({ endDateString }) => {
+const CountdownTimer = ({ endDateString, styleContainer }) => {
   const [timeDifference, setTimeDifference] = useState(null);
 
   useEffect(() => {
+    if (!endDateString) {
+      // Do nothing if endDateString is not available yet.
+      return;
+    }
+
     const interval = setInterval(() => {
       const saleEndDate = new Date(endDateString);
       const now = new Date();
@@ -30,17 +35,49 @@ const CountdownTimer = ({ endDateString }) => {
     return () => clearInterval(interval);
   }, [endDateString]);
 
+  if (!endDateString) {
+    // Return null or a loading indicator if endDateString is not available yet.
+    return null;
+  }
+
   return (
-    <Text
-      style={{
-        alignSelf: "flex-end",
-        color: "#000",
-        // marginHorizontal: SIZES.base,
-      }}
-    >
-      {timeDifference}
-    </Text>
+    <>
+      {timeDifference ? (
+        <Text
+          style={[
+            {
+              color: "#000",
+              marginHorizontal: 10,
+            },
+            styleContainer,
+          ]}
+        >
+          {timeDifference}
+        </Text>
+      ) : (
+        <Text
+          style={[
+            {
+              color: "#000",
+              marginHorizontal: 10,
+            },
+            styleContainer,
+          ]}
+        >
+          {getTimeDifferenceFormatted(endDateString)}
+        </Text>
+        // <ActivityIndicator size="small" color="#0000ff" />
+      )}
+    </>
   );
+};
+
+// Calculate the default endDateString for tomorrow
+const tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+
+CountdownTimer.defaultProps = {
+  endDateString: tomorrow.toISOString(), // Set tomorrow as the default end date/time
 };
 
 export default CountdownTimer;
