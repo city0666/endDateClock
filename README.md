@@ -11,22 +11,20 @@ npm i react-native-countdownenddate
   ### snack 
   ### https://snack.expo.dev/@annveeadmin/shallow-juice-box
  
-import CountdownTimer from 'react-native-countdownenddate';
+import {CountdownTimer} from 'react-native-countdownenddate';
 
         <CountdownTimer endDateString="2023-09-10" />
         
         
+# you can add style text 
         
-         you can add style text 
+### styleContainer  example
         
-         styleContainer  example
-        
-        styleContainer={{color: "#000",
-              marginHorizontal: 10,}}
+        styleContainer={{color: "#000",marginHorizontal: 10,}}
               
               
               
-                <CountdownTimer endDateString="2023-10-10"styleContainer={styles.yourstyle} />
+  <CountdownTimer endDateString="2023-10-10"styleContainer={styles.yourstyle} />
                 
                 
                

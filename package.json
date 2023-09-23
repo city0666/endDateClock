@@ -1,6 +1,6 @@
 {
   "name": "react-native-countdownenddate",
-  "version": "1.0.9",
+  "version": "1.0.15",
   "description": "count down timer ending time",
   "main": "index.js",
   "scripts": {
