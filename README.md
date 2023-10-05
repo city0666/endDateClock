@@ -14,6 +14,9 @@ npm i react-native-countdownenddate
 
 https://github-production-user-asset-6210df.s3.amazonaws.com/1519250/272801301-cb3b46bb-05db-4a11-8dd0-b26c613e79a8.gif
 
+![snack](https://github.com/city0666/endDateClock/assets/1519250/cb3b46bb-05db-4a11-8dd0-b26c613e79a8)
+
+
 
 import {CountdownTimer,BetweendownTimer} from 'react-native-countdownenddate';
 
