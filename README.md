@@ -10,7 +10,8 @@ npm i react-native-countdownenddate
  yarn add react-native-countdownenddate
   ### snack 
   ### https://snack.expo.dev/@annveeadmin/shallow-juice-box
- 
+ ![snack](https://github.com/city0666/dhignaevent/assets/1519250/a9b0f3e8-d6fe-4fe5-b29b-1b4c6815f9cb)
+
 import {CountdownTimer,BetweendownTimer} from 'react-native-countdownenddate';
 
         <CountdownTimer endDateString="2023-09-10" />
