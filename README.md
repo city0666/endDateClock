@@ -10,7 +10,10 @@ npm i react-native-countdownenddate
  yarn add react-native-countdownenddate
   ### snack 
   ### https://snack.expo.dev/@annveeadmin/shallow-juice-box
-https://user-images.githubusercontent.com/1519250/272801301-cb3b46bb-05db-4a11-8dd0-b26c613e79a8.gif
+
+
+https://github-production-user-asset-6210df.s3.amazonaws.com/1519250/272801301-cb3b46bb-05db-4a11-8dd0-b26c613e79a8.gif
+
 
 import {CountdownTimer,BetweendownTimer} from 'react-native-countdownenddate';
 
